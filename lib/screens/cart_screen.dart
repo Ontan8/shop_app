@@ -13,22 +13,22 @@ class CartScreen extends StatelessWidget {
         context); //this is a listener which listens to changes
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Cart'),
+        title: const Text('Your Cart'),
       ),
       body: Column(
         children: [
           Card(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
             child: Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Total',
                     style: TextStyle(fontSize: 20),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Chip(
                     label: Text(
                       '\$${cart.totalAmount}',
@@ -42,7 +42,7 @@ class CartScreen extends StatelessWidget {
                   ),
                   TextButton(
                       onPressed: () {},
-                      child: Text('PLACE ORDER'),
+                      child: const Text('PLACE ORDER'),
                       style: TextButton.styleFrom(
                           primary: Theme.of(context).primaryColor))
                 ],
