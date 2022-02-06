@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
+import '../widgets/cart_item.dart';
 import 'package:provider/provider.dart';
-import '../providers/cart.dart';
+import '../providers/cart.dart' show Cart;
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -48,7 +48,19 @@ class CartScreen extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Expanded(
+              child: ListView.builder(
+            itemBuilder: (ctx, index) => CartItem(
+                id: cart.items.values.toList()[index].id,
+                price: cart.items.values.toList()[index].price,
+                quantity: cart.items.values.toList()[index].quantity,
+                title: cart.items.values.toList()[index].title),
+            itemCount: cart.itemCount,
+          ))
         ],
       ),
     );
