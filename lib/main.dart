@@ -32,12 +32,12 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.deepOrange,
           fontFamily: 'Lato',
         ),
-        home: ProductsOverviewScreen(),
+        home: const ProductsOverviewScreen(),
         routes: {
           ProductDetailScreen.routeName: (ctx) {
-            return ProductDetailScreen();
+            return const ProductDetailScreen();
           },
-          CartScreen.routeName: (ctx) => CartScreen(),
+          CartScreen.routeName: (ctx) => const CartScreen(),
           OrdersScreen.routeName: (ctx) => OrdersScreen(),
         },
       ),

@@ -41,7 +41,7 @@ class _OrderItemState extends State<OrderItem> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              '${e.title}',
+                              e.title,
                               style: const TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),
